@@ -1,0 +1,74 @@
+﻿@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body {
+  font-family: 'Satoshi', Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border bg-white shadow-sm
+           border-ink-100
+           dark:bg-ink-800/70 dark:border-ink-600/40 dark:backdrop-blur;
+  }
+  .card-base {
+    @apply rounded-2xl border bg-white shadow-sm
+           border-ink-100
+           dark:bg-ink-800/70 dark:border-ink-600/40 dark:backdrop-blur;
+  }
+  .card-pad { @apply p-5; }
+
+  .field-input {
+    @apply w-full bg-transparent outline-none text-sm
+           placeholder:text-ink-300 dark:placeholder:text-cream-200/30
+           text-ink-900 dark:text-cream-100;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition;
+  }
+  .btn-primary {
+    @apply bg-champagne-400 text-ink-900 hover:bg-champagne-300 shadow-sm;
+  }
+  .btn-ghost {
+    @apply bg-ink-100 text-ink-700 hover:bg-ink-200
+           dark:bg-white/[0.04] dark:text-cream-100/80 dark:hover:bg-white/[0.08];
+  }
+  .btn-danger  { @apply bg-rose-500 text-white hover:bg-rose-400; }
+  .btn-success { @apply bg-emerald-500 text-white hover:bg-emerald-400; }
+
+  .input {
+    @apply w-full rounded-xl px-3.5 py-2.5 text-sm
+           bg-white dark:bg-ink-800
+           border border-ink-200 dark:border-ink-600
+           text-ink-900 dark:text-cream-100
+           placeholder:text-ink-400 dark:placeholder:text-cream-200/30
+           focus:outline-none focus:ring-2 focus:ring-champagne-400/30 focus:border-champagne-400;
+  }
+
+  .pill { @apply inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-medium; }
+  .pill-success { @apply pill bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200 dark:bg-emerald-500/15 dark:text-emerald-300 dark:ring-emerald-500/30; }
+  .pill-danger  { @apply pill bg-rose-50    text-rose-700    ring-1 ring-rose-200    dark:bg-rose-500/15    dark:text-rose-300    dark:ring-rose-500/30; }
+  .pill-warn    { @apply pill bg-amber-50   text-amber-700   ring-1 ring-amber-200   dark:bg-amber-500/15   dark:text-amber-300   dark:ring-amber-500/30; }
+  .pill-info    { @apply pill bg-ink-100    text-ink-800     ring-1 ring-ink-200     dark:bg-ink-500/15     dark:text-ink-100     dark:ring-ink-500/30; }
+  .pill-mute    { @apply pill bg-ink-50     text-ink-600     ring-1 ring-ink-100     dark:bg-white/[0.04]   dark:text-cream-100/70 dark:ring-white/[0.08]; }
+  .pill-gold    { @apply pill bg-champagne-50 text-champagne-700 ring-1 ring-champagne-200 dark:bg-champagne-400/15 dark:text-champagne-300 dark:ring-champagne-400/30; }
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(11, 14, 18, 0.10); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(11, 14, 18, 0.20); }
+.dark ::-webkit-scrollbar-thumb { background: rgba(21, 168, 245, 0.10); }
+.dark ::-webkit-scrollbar-thumb:hover { background: rgba(21, 168, 245, 0.22); }
+
+.scroll-thin::-webkit-scrollbar { width: 4px; height: 4px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: rgba(11, 14, 18, 0.15); border-radius: 4px; }
+.dark .scroll-thin::-webkit-scrollbar-thumb { background: rgba(21, 168, 245, 0.16); }
+.scroll-thin { scrollbar-width: thin; }
+

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0B0E12" />
+    <title>Aludra Condos • Portaria</title>
+    <script>
+      (function () {
+        try {
+          var t = JSON.parse(localStorage.getItem('condoflow.portaria.theme') || '{}');
+          // Default = dark (navy). Apenas removemos se o usuário pediu claro.
+          if (t.state && t.state.mode === 'light') document.documentElement.classList.remove('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-navy-50 dark:bg-navy-950 text-navy-900 dark:text-cream-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -23,7 +23,7 @@ export default function LoginPage() {
   const { setSession } = useAuth();
   const nav = useNavigate();
 
-  useEffect(() => { document.title = 'Vale Acesso Tecnologia Â· Portaria'; }, []);
+  useEffect(() => { document.title = 'Vale Acesso Tecnologia - Portaria'; }, []);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -48,7 +48,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen grid lg:grid-cols-[1.4fr_1fr] bg-navy-950 text-cream-100">
-      {/* Esquerda: cinematogrÃ¡fica */}
+      {/* Esquerda: cinematografica */}
       <aside className="relative hidden lg:flex flex-col overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950" />
         <div
@@ -66,7 +66,7 @@ export default function LoginPage() {
           <div className="flex items-center">
             <img src="/logo.png" alt="Vale Acesso Tecnologia" className="h-20 w-auto object-contain" draggable={false} />
             <div className="ml-4 pl-4 border-l border-cyan-500/15 self-stretch flex items-center">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-cyan-300/70">Smart Access Â· Portaria</div>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-cyan-300/70">Smart Access - Portaria</div>
             </div>
           </div>
 
@@ -76,8 +76,8 @@ export default function LoginPage() {
               <span className="text-gold-400 italic">redefinida.</span>
             </h1>
             <p className="mt-5 text-cream-200/70 text-sm leading-relaxed max-w-sm">
-              Controle de acesso, encomendas e visitantes com a discriÃ§Ã£o e a
-              sofisticaÃ§Ã£o que seu condomÃ­nio merece.
+              Controle de acesso, encomendas e visitantes com a discricao e a
+              sofisticacao que seu condominio merece.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
               <Stat label="Portaria" value="24h" />
@@ -87,15 +87,15 @@ export default function LoginPage() {
           </div>
 
           <div className="text-[11px] tracking-[0.2em] uppercase text-cream-200/30">
-            Â© {new Date().getFullYear()} Vale Acesso Tecnologia Â· Tecnologia em Controle de Acesso
+            (c) {new Date().getFullYear()} Vale Acesso Tecnologia - Tecnologia em Controle de Acesso
           </div>
         </div>
       </aside>
 
-      {/* Direita: formulÃ¡rio */}
+      {/* Direita: formulario */}
       <main className="relative flex flex-col justify-center px-6 sm:px-12 lg:px-16 py-12 bg-navy-950">
         <div className="absolute top-6 right-6 text-[10px] uppercase tracking-[0.3em] text-cream-200/40">
-          v1.0.1 Â· build {new Date().getFullYear()}.05
+          v1.0.1 - build {new Date().getFullYear()}.05
         </div>
 
         <div className="max-w-sm w-full mx-auto animate-fadeIn">
@@ -106,12 +106,12 @@ export default function LoginPage() {
           <div className="text-[10px] uppercase tracking-[0.3em] text-gold-400/80 mb-2">Portaria</div>
           <h2 className="font-display text-4xl leading-tight text-cream-100">Bem-vindo</h2>
           <p className="text-cream-200/50 text-sm mt-2 leading-relaxed">
-            Acesse uma experiÃªncia condominial mais elegante,
+            Acesse uma experiencia condominial mais elegante,
             integrada e segura.
           </p>
 
           <form onSubmit={submit} className="mt-10 space-y-5">
-            <Field label="UsuÃ¡rio" icon={User}>
+            <Field label="Usuario" icon={User}>
               <input
                 type="email" value={email} onChange={(e) => setEmail(e.target.value)} required
                 autoComplete="username"
@@ -126,7 +126,7 @@ export default function LoginPage() {
                 value={senha} onChange={(e) => setSenha(e.target.value)} required
                 autoComplete="current-password"
                 className="bg-transparent flex-1 outline-none placeholder:text-cream-200/20 text-sm text-cream-100"
-                placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+                placeholder="********"
               />
               <button type="button" onClick={() => setShowPwd((s) => !s)}
                       className="text-cream-200/40 hover:text-gold-400 transition" aria-label="Mostrar senha">
@@ -142,7 +142,7 @@ export default function LoginPage() {
                 <input inputMode="numeric" value={captchaInput}
                        onChange={(e) => setCaptchaInput(e.target.value.replace(/\D/g, ''))} required
                        className="bg-transparent flex-1 outline-none text-sm tracking-widest text-cream-100"
-                       placeholder="â€”" />
+                       placeholder="-" />
                 <button type="button" className="text-cream-200/40 hover:text-gold-400 transition"
                         onClick={() => { setCaptcha(makeCaptcha()); setCaptchaInput(''); }}
                         aria-label="Regenerar captcha">

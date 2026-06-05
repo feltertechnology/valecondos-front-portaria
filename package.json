@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host --port 5173",
     "build": "tsc -b && vite build",
+    "cf:deploy": "wrangler deploy",
     "preview": "vite preview --host --port 5173",
     "lint": "eslint ."
   },

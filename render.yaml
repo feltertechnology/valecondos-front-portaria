@@ -6,7 +6,7 @@ services:
     staticPublishPath: ./dist
     envVars:
       - key: VITE_API_URL
-        value: https://vale-acesso-api.onrender.com
+        value: https://velecondos-api.onrender.com
     routes:
       - type: rewrite
         source: /*

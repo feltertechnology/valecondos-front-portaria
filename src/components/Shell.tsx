@@ -74,7 +74,7 @@ export default function Shell({ children }: { children: ReactNode }) {
           />
         </div>
 
-        {/* NavegaÃ§Ã£o */}
+        {/* Navegação */}
         <nav className="flex-1 flex flex-col gap-0.5 p-2 mt-2 overflow-y-auto overflow-x-hidden scroll-thin">
           {visibleNav.map((n) => (
             <NavLink
@@ -140,7 +140,7 @@ export default function Shell({ children }: { children: ReactNode }) {
             'px-0 group-hover/sidebar:px-3 py-2.5'
           )}>
             <Settings className="size-4 shrink-0" />
-            <SideLabel>ConfiguraÃ§Ãµes</SideLabel>
+            <SideLabel>Configurações</SideLabel>
           </button>
 
           <div className="border-t border-gold-500/10 pt-2 mt-2 px-3 h-0 overflow-hidden group-hover/sidebar:h-auto transition-all">
@@ -180,7 +180,7 @@ export default function Shell({ children }: { children: ReactNode }) {
   );
 }
 
-/** Texto da sidebar que colapsa pra largura 0 quando ela nÃ£o estÃ¡ hovered. */
+/** Texto da sidebar que colapsa pra largura 0 quando ela não está hovered. */
 function SideLabel({ children }: { children: React.ReactNode }) {
   return (
     <span
@@ -217,4 +217,5 @@ function AlertsToast({ alerts, onDismiss }: {
     </div>
   );
 }
+
 
